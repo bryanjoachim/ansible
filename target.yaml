@@ -5,6 +5,6 @@
   connection: ssh
   tasks:
     - name: install httpd on linux
-      action: yum name=httpd state=absent
+      action: yum name=httpd state=present
     - name: install docker on nodes
       action: yum name=docker state=present
