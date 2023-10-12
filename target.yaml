@@ -1,0 +1,10 @@
+--- #target playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install httpd on linux
+      action: yum name=httpd state=absent
+    - name: install docker on nodes
+      action: yum name=docker state=present
